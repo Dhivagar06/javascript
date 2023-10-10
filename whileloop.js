@@ -71,3 +71,7 @@ for(let name of names){
         }
     }
 }
+// append
+d="dhiva"
+d+="gar"
+console.log("apped"+d);
