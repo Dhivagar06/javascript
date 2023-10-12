@@ -1,45 +1,16 @@
-
-
- <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>javascript mini project</title>
-    <style>
-        ul {
-            list-style-type: none;
-        }
-    </style>
-    <!-- <script src="whileloop.js"></script> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="whileloop.js"></script>
 </head>
-<body>
-    <h1>Simple To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Enter a new task">
-    <button onclick="addTask()">Add</button>
-    <ul id="taskList">
-    </ul>
-
-    <script>
-        function addTask() {
-            var taskInput = document.getElementById("taskInput");
-            var taskText = taskInput.value.trim();
-
-            if (taskText === "") {
-                alert("Please enter a task.");
-                return;
-            }
-
-            var taskList = document.getElementById("taskList");
-            var li = document.createElement("li");
-            li.innerHTML = taskText;
-            var removeButton = document.createElement("button");
-            removeButton.innerHTML = "Remove";
-            removeButton.onclick = function () {
-                li.remove();
-            };
-            li.appendChild(removeButton);
-            taskList.appendChild(li);
-            taskInput.value = "";
-        }
-    </script>
+<body style="border: 3px solid black; text-align: center; border-radius: 100px; background-color: aqua;">
+    <h1 id="count">0</h1>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <button onclick="reset()">Reset</button>
 </body>
-</html> 
+</html>
